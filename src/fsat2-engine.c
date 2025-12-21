@@ -14,7 +14,7 @@ static void *capture_task(void *ctx)
 {
 	int ret;
 
-	printf("Capture/logging task listening on %s\n", sub_str);
+	printf("Capture/logging task listening on %s\n", pub_str);
 
 	/* Subscriber (RX) */
 	void *subscriber = zmq_socket(ctx, ZMQ_SUB);
