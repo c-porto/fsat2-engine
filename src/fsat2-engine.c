@@ -42,14 +42,7 @@ static void *capture_task(void *ctx)
 
 		size_t datalen = zmq_msg_size(&msg);
 
-		uint8_t *rx_data = zmq_msg_data(&msg);
-
-		printf("XSUB: ");
-
-		for (size_t i = 0; i < datalen; ++i) {
-			printf("%#X, ", rx_data[i]);
-		}
-		printf("\n\r");
+		printf("XSUB: %zu bytes\n\r", datalen);
 
 		zmq_msg_close(&msg);
 	}
